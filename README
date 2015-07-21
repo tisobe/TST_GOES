@@ -1,0 +1,34 @@
+
+GOES proton monitoring system for Chandra.
+
+
+get_go.pl   read data from noaa site and created GOES data file (pchan)
+
+    input:      ftp://ftp.swpc.noaa.gov/pub/lists/particle/Gp_part_5m.txt
+                ftp://ftp.swpc.noaa.gov/pub/lists/pchan/*pchan_5m.txt
+
+    output:     G13pchan_5m.txt
+                G15pchan_5m.txt
+                G13_part_5m.txt
+                pgplot.gif
+
+
+I4 directory:
+
+get_go.pl   read data from noaa site and created GOES data file (particle)
+
+    input:      ftp://ftp.swpc.noaa.gov/pub/lists/particle/Gp_part_5m.txt
+                ftp://ftp.swpc.noaa.gov/pub/lists//particle/*part_5m.txt
+
+    output:     G13pchan_5m.txt
+                G15pchan_5m.txt
+                G13_part_5m.txt
+                pgplot.gif
+
+
+Cron job
+--------
+2,7,12,17,22,27,32,37,42,47,52,57 * * * * /data/mta4/proj/rac/ops/GOES/get_go.pl
+
+2,7,12,17,22,27,32,37,42,47,52,57 * * * * /data/mta4/proj/rac/ops/GOES/I4/get_go.pl
+
